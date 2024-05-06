@@ -2,9 +2,23 @@
 
 ## Projeto prático API Restful Nodejs e MongoDB
 
-### Desenvolvido em Nod
+### Desenvolvido em Node.js (versão 20.10)
 
-_Liguagem de Programação_ - **CARLPRO**
+Projeto criado na Linguagem de Programação
+Curso: Técnico de Informática Integrado ao Ensino Médio
+Instituto federal de São Paulo - Campus Caraguatatuba
 
-treinamento de comandos git como parte
-do apreciado de Framework **Node.js**
+#### Pacotes Utilizados
+
+- nodemon
+- express
+- sucrase
+- dotenv
+- mongoose
+- multer
+- yup
+- cors
+
+#### Banco de Dados: MongoDB
+
+Autor: **Bruno Coimbra**
