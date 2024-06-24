@@ -1,6 +1,6 @@
-import House from '../models/House'
-import User from '../models/User'
-import * as Yup from 'yup'
+import House from '../models/House';
+import User from '../models/User';
+import * as Yup from 'yup';
 
 class HouseController {
     async index(req, res) {
@@ -32,7 +32,7 @@ class HouseController {
         })
         return res.json(house)
     }
-    async store(req, res) {
+    async update(req, res) {
         const schema = Yup.object().shape({
             description: Yup.string().required(),
             price: Yup.number().required(),
@@ -61,6 +61,19 @@ class HouseController {
         })
         return res.send()    
     }
+
+    async destroy(req, res) {
+const { house_id } = req.body
+//const house_id = req.body.house_id
+const { user_id } = req.headers
+const user = await User.findById(user_id)
+const houses = await House.findById(house_id)
+if (String(user._id) !== String(houses.user)) {
+return res.status(401).json({ error: 'Não autorizado' })
+}
+await House.findByIdAndDelete({_id: house_id})
+return res.json({ message: 'Excluido com sucesso!'})
+    }
 }
 
-export default new HouseController()
+export default new HouseController();

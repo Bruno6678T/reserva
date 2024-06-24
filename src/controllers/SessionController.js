@@ -6,8 +6,8 @@
     destroy (delete): quando queremos deletar uma sessao
 */ 
 
-import User from '../models/User'
-import * as Yup from 'yup'
+import User from '../models/User';
+import * as Yup from 'yup';
 
 class SessionController {
     async store(req,res) {
@@ -26,4 +26,4 @@ class SessionController {
     }
 }
 
-export default new SessionController()
+export default new SessionController();

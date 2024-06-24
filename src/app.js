@@ -1,9 +1,9 @@
-import express from 'express'
-import mongoose from 'mongoose'
-import cors from 'cors'
-import path from 'path'
-import routes from './router'
-import dotenv from 'dotenv'
+import express from 'express';
+import mongoose from 'mongoose';
+import cors from 'cors';
+import path from 'path';
+import routes from './router';
+import dotenv from 'dotenv';
 
 dotenv.config()
 class App {
